@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Upload</title>
+<style>
+    canvas {
+  width: 640px;
+  border: 1px solid #555;
+}
+</style>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.min.js"></script>
+    <script src="https://www.dukelearntoprogram.com/course1/common/js/image/SimpleImage.js"></script>
+</head>
+<body>
+    <div>
+        <input type="file"   multiple="false" id="myFile"  accept="image/*" onchange="uploadAndLoad()">
+    </div>
+
+    <canvas id="can"></canvas>
+    <hr>
+     <button id="download">Downlaod</button>
+    <script>
+function uploadAndLoad(){
+    var imgcanvas=document.getElementById("can");
+    var imgInput=document.getElementById("myFile");
+    var image=new SimpleImage(imgInput);
+    image.drawTo(imgcanvas);
+}
+
+download.addEventListener("click", function() {
+  // only jpeg is supported by jsPDF
+  var canvasImg=document.getElementById('can');
+  var imgData = canvasImg.toDataURL("image/jpeg", 1.0);
+  var pdf = new jsPDF();
+
+  pdf.addImage(imgData, 'JPEG', 0, 0);
+  var download = document.getElementById('download');
+
+  pdf.save("download.pdf");
+}, false);
+    </script>
+</body>
+</html>

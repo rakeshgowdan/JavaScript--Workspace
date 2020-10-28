@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        #output{
+            align-content: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            background-size: 40%;
+            background-blend-mode: lighten;
+        }
+        .bg-text{
+            padding: 10px;
+            margin: 30px;
+            border: 1px solid ;
+            text-align: center;
+           
+            
+            
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+</head>
+<body>
+    <div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Upload</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          
+            <input type="file"   multiple="false" id="myFile"  accept="image/*" onchange="loadFile(event)">
+        </div>
+      </nav>
+      <div id="output">
+      <div class="bg-text" >
+         
+            <header>Header</header>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem perferendis eveniet accusantium, optio culpa praesentium dignissimos fugit sed, illo, totam quidem. Porro dignissimos rem libero deleniti eos hic ducimus optio doloremque, quo accusamus voluptatibus impedit sapiente fugit nobis recusandae officia corrupti fuga aperiam! Corrupti eum tempore aut, culpa sunt libero quis reiciendis omnis distinctio quod nulla iure nostrum veritatis eaque, minima velit eius incidunt dolorum. Ut minus expedita eveniet deserunt veniam nam ipsum aspernatur rem, consequatur illum nisi consequuntur quibusdam at dolores, cumque quisquam? Aliquid, reprehenderit natus ullam quasi amet ipsum magni voluptatem tempora voluptates quidem ea mollitia obcaecati minima?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta consequuntur minima molestias nemo eos odit temporibus beatae, voluptas id eveniet fugit aspernatur iusto molestiae at ad, deleniti repellat ipsam atque facere quis iste voluptates distinctio et numquam? Culpa tempora quos, minima consequatur possimus asperiores! Corporis maxime, impedit harum nemo delectus nisi distinctio quibusdam temporibus, blanditiis facilis unde eligendi cumque rerum at ratione dolorem quidem perferendis nostrum quasi tenetur accusamus? Amet, veritatis officiis ab incidunt explicabo eligendi vitae nulla deserunt quod!</p>
+            
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero optio illo incidunt? Odio magnam omnis minima dicta, id animi, explicabo debitis nisi maxime temporibus non sapiente inventore voluptatem. Quaerat quas sed nemo perspiciatis quos a vero quidem ipsam, sequi voluptates magnam odio provident autem molestias reiciendis voluptatibus sunt ab sit tenetur? Laborum facere, non sapiente sit suscipit veritatis facilis tenetur reiciendis provident, enim sequi officiis explicabo eveniet veniam aliquid. Earum doloribus, nobis facilis consectetur repudiandae veniam quidem quisquam, suscipit quod aut fuga vero placeat sit culpa. Totam rem, ad ex facilis quasi repellat voluptatem ea nemo iste, consectetur autem blanditiis enim animi aut eos, nesciunt adipisci vitae consequuntur? Id quas eligendi rem nisi impedit tenetur voluptatum corrupti incidunt commodi alias? Illo adipisci quo, expedita iure optio commodi delectus mollitia voluptatem ex voluptatibus sequi reprehenderit eveniet quis voluptate numquam cupiditate sit non distinctio repellendus harum perspiciatis cum? Enim mollitia sit ullam cum quod fugit, nam sequi unde eligendi magni quisquam. Labore fugiat eaque itaque eum vero, esse ab dolorum? Rem, itaque laborum quisquam pariatur quo veniam qui eos quod facilis consectetur, asperiores, eligendi expedita deleniti? Quas aperiam laborum dicta optio nisi nobis necessitatibus magni atque. Illum nesciunt unde quidem iste earum.</p>
+            <footer>Footer</footer>
+            
+      </div>
+    </div>
+</div>
+    <script>
+        var loadFile = function(event) {
+    var output = document.getElementById('output');
+    output.style.backgroundImage= "url("+URL.createObjectURL(event.target.files[0])+")";
+  };
+    </script>
+</body>
+</html>
